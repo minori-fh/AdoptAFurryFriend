@@ -2,6 +2,7 @@
   "name": "adopt-a-furry-friend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://minori-fh.github.io/AdoptAFurryFriend",
   "dependencies": {
     "-": "0.0.1",
     "@testing-library/jest-dom": "^4.2.4",
@@ -17,7 +18,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "pre-deploy": "npm run build",
+    "dedploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
