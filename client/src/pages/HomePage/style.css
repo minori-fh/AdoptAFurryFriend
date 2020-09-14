@@ -1,6 +1,7 @@
-#main {
+.main {
     background: linear-gradient(170deg, rgb(164, 209, 219) 50%, white 50%);
     height: 100vh; 
     width: 100%; 
     max-width: 100%; 
+    padding: 10px;
 }

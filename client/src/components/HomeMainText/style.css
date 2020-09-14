@@ -1,0 +1,24 @@
+.home-main {
+    width: 100%; 
+    text-align: center;
+}
+
+.h1{
+    font-size: 50px; 
+    font-family: 'Lato', sans-serif;
+    font-weight: bold; 
+    color: rgb(37, 37, 65);
+}
+
+.h2 {
+    font-size: 30px; 
+    font-family: 'Lato', sans-serif;
+    color: rgb(37, 37, 65);
+    padding: 10px 0px 10px 0px; 
+}
+
+.h3 {
+    font-size: 20px; 
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 141, 141); 
+}

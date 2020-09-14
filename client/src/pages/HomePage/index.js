@@ -8,7 +8,7 @@ import HomeAgencies from "../../components/HomeAgencies"
 function HomePage(props) {
 
     return (
-        <div id="main">
+        <div className="main">
             <HomeNav/>
             <HomeMainText/>
             <HomeAgencies/>
