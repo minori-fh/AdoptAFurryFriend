@@ -17,7 +17,7 @@ function HomeAgencies(props) {
                 <img className="nav-agency" src={RocketDog} style={{width: "140px"}}></img>
             </div>
             
-            <a className="home-btn" href="#" role="button">FIND LOVE</a>       
+            <button onClick={props.goSearch} className="home-btn" href="#" role="button">FIND LOVE</button>       
 
         </div>
     );

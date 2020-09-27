@@ -38,3 +38,10 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* custom css */
+
+* :focus {
+  outline: 0 !important;
+}

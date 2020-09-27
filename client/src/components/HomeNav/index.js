@@ -8,7 +8,7 @@ function HomeNav(props) {
         <div className="navbar">
                 <img className="nav-logo" src={Logo} style={{width: "40px"}}></img>
                 <div className="nav-header">Adopt a Furry Friend</div>               
-                <a className="nav-btn" href="#" role="button">SEARCH NOW</a>        
+                <button onClick={props.goSearch} className="nav-btn" href="#" role="button">SEARCH NOW</button>        
 
         </div>
     );

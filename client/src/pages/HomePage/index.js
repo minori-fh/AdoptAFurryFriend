@@ -9,9 +9,9 @@ function HomePage(props) {
 
     return (
         <div className="main">
-            <HomeNav/>
+            <HomeNav goSearch={props.buttonClick}/>
             <HomeMainText/>
-            <HomeAgencies/>
+            <HomeAgencies goSearch={props.buttonClick}/>
         </div>
     );
 

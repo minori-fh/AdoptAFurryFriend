@@ -1,12 +1,17 @@
 // Require/import the HTTP module
 var http = require("http");
+var express = require("express");
+var mongoose = require("mongoose");
 
 // Define a port to listen for incoming requests
-var PORT = 8080;
+var PORT = process.env.PORT || 3000;
+
+// Connect to Mongoose 
+var MONGODB_URI = process.env.MONGOLAB_CHARCOAL_URI || "mongodb://localhost/dogedb";
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Create a generic function to handle requests and responses
 function handleRequest(request, response) {
-
   // Send the below string to the client when the user visits the PORT URL
   response.end("It Works!! Path Hit: " + request.url);
 }

@@ -4,7 +4,7 @@ import "./style.css"
 function SearchPage(props) {
 
     return (
-        <div>SearchPage</div>
+        <div className="search-main">SearchPage</div>
     );
 
 } 

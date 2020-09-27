@@ -15,11 +15,15 @@ class App extends Component {
     }
   }
 
+   goSearch = () => {
+    this.setState({searchPage: true});
+  }
+
   render(){
     return(
       <div>
 
-        <HomePage/>
+        <HomePage buttonClick={this.goSearch.bind(this)}/>
         {(this.state.searchPage && 
         <SearchPage/>
         )}
