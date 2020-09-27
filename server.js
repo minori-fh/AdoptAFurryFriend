@@ -8,7 +8,7 @@ var app = express();
 
 // Define a port to listen for incoming requests
 var PORT = process.env.PORT || 3000;
-app.use(express.static("public"));
+app.use(express.static("client/public"));
 
 // Connect to Mongoose 
 var MONGODB_URI = process.env.MONGOLAB_CHARCOAL_URI || "mongodb://localhost/dogedb";
