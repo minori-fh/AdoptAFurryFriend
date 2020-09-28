@@ -15,7 +15,7 @@ class App extends Component {
     }
   }
 
-   goSearch = () => {
+  goSearch = () => {
     this.setState({searchPage: true});
   }
 

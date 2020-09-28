@@ -4,7 +4,14 @@ var express = require("express");
 var mongoose = require("mongoose");
 var path = require("path");
 
-var app = express();
+var app = express(); //express instance
+var db = require("./models") //require models
+
+// Enables CORS
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
 
 // Define a port to listen for incoming requests
 var PORT = process.env.PORT || 3000;
@@ -34,7 +41,6 @@ var server = http.createServer(handleRequest);
 
 // Start our server so that it can begin listening to client requests.
 server.listen(PORT, function() {
-
   // Log (server-side) when our server has started
   console.log("Server listening on: http://localhost:" + PORT);
 });
