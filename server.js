@@ -1,46 +1,38 @@
-// Require/import the HTTP module
-var http = require("http");
+// Require/import
 var express = require("express");
 var mongoose = require("mongoose");
-var path = require("path");
+var bodyParser = require('body-parser')
+var cors = require('cors');
 
-var app = express(); //express instance
 var db = require("./models") //require models
-
-// Enables CORS
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  next();
-});
-
-// Define a port to listen for incoming requests
-var PORT = process.env.PORT || 3000;
-app.use(express.static("client/public"));
+var routes = require("./routes") //require routes
 
 // Connect to Mongoose 
-var MONGODB_URI = process.env.MONGOLAB_CHARCOAL_URI || "mongodb://localhost/dogedb";
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
-
-// Route: root 
-app.get("/", function(req, res){
-
-  console.log("root route hit")
-  res.sendFile(path.join(__dirname + "/public/index.html"))
-
+var MONGODB_URI = process.env.MONGOLAB_CHARCOAL_URI || "mongodb://127.0.0.1:27017/dogedb";
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true }, (err) => {
+  if(!err){
+    console.log("Server has been connected to mongodb")
+  } else {
+    console.log(err)
+  }
 });
 
-// Create a generic function to handle requests and responses
-function handleRequest(request, response) {
-  // Send the below string to the client when the user visits the PORT URL
-  response.end("It Works!! Path Hit: " + request.url);
-}
+// Express instance 
+var app = express(); 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
 
-// Use the Node HTTP package to create our server.
-// Pass the handleRequest function to empower it with functionality.
-var server = http.createServer(handleRequest);
+// Routing
+app.use('http://localhost:3000/', routes)
+app.use('/', routes)
 
-// Start our server so that it can begin listening to client requests.
-server.listen(PORT, function() {
-  // Log (server-side) when our server has started
-  console.log("Server listening on: http://localhost:" + PORT);
-});
+// Define a port to listen for incoming requests
+const PORT = process.env.PORT || 3000;
+app.use(express.static(__dirname + 'client', { redirect : false }));
+
+// Create server
+app.listen(PORT, () => {
+  console.log("Server listening on: http://localhost:" + PORT)
+})
+
