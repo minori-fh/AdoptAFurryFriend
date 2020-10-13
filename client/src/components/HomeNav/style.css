@@ -25,3 +25,16 @@
     margin-right: 20px;
     padding: 6px;
 }
+
+.locale {
+    font-family: 'Pacifico', cursive;
+    font-size: 18px;
+    color: rgb(190, 13, 13);
+}
+
+@media screen and (max-width: 1200px) {
+    .nav-btn {
+        width: 110px;
+        font-size: 12px;
+    }
+}

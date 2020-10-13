@@ -9,12 +9,12 @@ function HomeAgencies(props) {
 
     return (
         <div className="main-agency">
-            <div className="h2">Agencies We Support: </div>
+            <div className="agency-heading">Agencies We Support: </div>
 
-            <div>
-                <img className="nav-agency" src={Hss} style={{width: "100px"}}></img>
-                <img className="nav-agency" src={PetsMart} style={{width: "140px"}}></img>
-                <img className="nav-agency" src={RocketDog} style={{width: "140px"}}></img>
+            <div className="logo-wrapper">
+                <a href="https://www.hssv.org/" target="_blank"><img className="nav-agency hs" src={Hss}></img></a>
+                <a href="https://petsmartcharities.org/" target="_blank"><img className="nav-agency pm" src={PetsMart}></img></a>
+                <a href="https://www.rocketdogrescue.org/" target="_blank"><img className="nav-agency rd" src={RocketDog}></img></a>
             </div>
             
             <button onClick={props.goSearch} className="home-btn" href="#" role="button">FIND LOVE</button>       

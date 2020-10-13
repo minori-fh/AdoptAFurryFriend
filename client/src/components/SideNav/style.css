@@ -1,0 +1,18 @@
+.sidenav {
+    width: calc(20%-15px);
+    padding-left: 15px;
+}
+
+.sidenav-cat {
+    color: rgb(24, 24, 24);;
+    font-family: 'Heebo', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+li {
+  list-style-type: none;  
+  padding: 3px;
+  text-decoration-color: rgb(164, 209, 219);
+}

@@ -1,15 +1,33 @@
 .main-agency {
-    width: 60%;
+    width: 40%;
     margin: auto; 
-    margin-top: 5%;
-    background-color: white !important; 
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 12%;
+    background-color: rgb(230, 230, 230);
     border-radius: 15px;
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
     height: 35%;
     text-align: center;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 80px 60px rgba(0, 0, 0, 0.12)
+  ;
+}
+
+.agency-heading {
+    font-size: 18px; 
+    font-family: 'Lato', sans-serif;
+    font-family: 'Heebo', sans-serif;
+    margin-top: 10px;
+}
+
+.logo-wrapper {
+    margin: auto;
 }
 
 .main-agency > div {
@@ -19,6 +37,7 @@
 
 .main-agency > button {
     margin: 0 auto;
+    margin-bottom: 10px;
 }
 
 .nav-agency {
@@ -29,12 +48,40 @@
     border: none;
     width: 100px;
     text-decoration: none; 
-    background-color: rgb(255, 141, 141) !important;
+    background-color: rgb(255, 141, 141);
     color: white; 
     font-weight: bold;  
-    border-radius: 25px !important; 
-    font-size: 14px !important; 
+    border-radius: 25px; 
+    font-size: 14px; 
     font-family: 'Heebo', sans-serif;
     text-align: center; 
     padding: 6px;
+}
+
+.hs {
+    width: 90px;
+}
+
+.pm, .rd {
+    width: 120px;
+}
+
+@media screen and (max-width: 1200px) {
+    .hs {
+        width: 60px;
+    }
+    
+    .pm, .rd {
+        width: 80px;
+    }
+    .home-btn {
+        width: 85px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-agency {
+        display: block;
+    }
 }

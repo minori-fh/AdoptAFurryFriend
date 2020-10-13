@@ -16,12 +16,19 @@ class App extends Component {
       searchPage: false,
       proxyurl: "https://cors-anywhere.herokuapp.com/",
       dogearr: [],
+      pmDoges: [],
+      rdDoges: [],
+      hsDoges: []
     }
   }
 
   componentDidMount(){
 
       let doges = []
+
+      let pmDoges = []
+      let rdDoges = []
+      let hsDoges = []
 
       axios.get(this.state.proxyurl + "https://petsmartcharities.org/adopt-a-pet/find-a-pet?city_or_zip=94105&species=dog&other_pets=_none&form_build_id=form-Q8G91jKYwU43iYKOE9O6DUusJ5_BtUw4P1YDdC7PBfU&form_id=adopt_a_pet_search_block_form&op=Search")
           .then(function(response){
@@ -31,16 +38,17 @@ class App extends Component {
           $(".adopt-a-pet-item").each(function(i, element){
     
                   var pmResults = {};
-              
-                  pmResults.name = $(element).find("h4").text();
+
+                  let name = $(element).find("h4").text().toLowerCase()
+                  pmResults.name = name.charAt(0).toUpperCase() + name.slice(1);
                   pmResults.breed = $(element).find("h6").text();
-                  // pmResults.imgLink = $(element).children(".aap-pet-photo").children("img");
                   pmResults.moreInfo = $(element).find("a").attr("href")
-                  pmResults.site = "petsMart"
+                  pmResults.imgLink = $(element).find("img").eq(1).attr("src")
+                  pmResults.site = "pm"
 
                   doges.push(pmResults)
+                  pmDoges.push(pmResults)
           });
-
       });
 
       axios.get(this.state.proxyurl + "https://www.rocketdogrescue.org/adopt/adoptees/")
@@ -59,9 +67,10 @@ class App extends Component {
                   rdResults.breed = breed3.slice(2)
                   rdResults.imgLink = $(element).children(".shadow").children("img").attr("src")
                   rdResults.moreInfo = $(element).find("h3").children("a").attr("href")
-                  rdResults.site = "rocketDog"
+                  rdResults.site = "rd"
 
                   doges.push(rdResults)
+                  rdDoges.push(rdResults)
           });
       });
 
@@ -79,35 +88,23 @@ class App extends Component {
                   hsResults.imgLink = "https://adopt.hssvmil.org" + $(element).children(".pic-wrap").children("a").children("img").attr("src")
                   var breed1 = $(element).children(".pic-wrap").children(".hovertext").text().trim().split("                ")
                   hsResults.breed = breed1[1]
-                  hsResults.site = "hss"
+                  hsResults.site = "hs"
 
                   doges.push(hsResults)
-
+                  hsDoges.push(hsResults)
           });
       });
+      
+      console.log("this is the dogearr: ", doges)
 
-      console.log("this is the doge obj: ", doges)
       this.setState({dogearr: doges})
+      this.setState({pmDoges: pmDoges})
+      this.setState({rdDoges: rdDoges})
+      this.setState({hsDoges: hsDoges})
   }
 
   goSearch = () => {
     this.setState({searchPage: true});
-    console.log("dogearr in goSearch func", this.state.dogearr)
-
-    let dogearr = this.state.dogearr
-
-    for (let i = 0; i < dogearr.length; i++) {
-
-      console.log("arr[i] ", dogearr[i])
-
-      axios.post("http://localhost:3000/doge", dogearr[i])
-      .then(res => {
-        console.log(res)
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-    }
   }
 
   render(){
@@ -116,7 +113,7 @@ class App extends Component {
 
         <HomePage buttonClick={this.goSearch}/>
         {(this.state.searchPage && 
-        <SearchPage/>
+        <SearchPage doges={this.state.dogearr} pmDoges={this.state.pmDoges} rdDoges={this.state.rdDoges} hsDoges={this.state.hsDoges}/>
         )}
 
       </div>

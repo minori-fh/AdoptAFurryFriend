@@ -1,0 +1,90 @@
+.dogeDisplay {
+  width: 80%; 
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap; 
+  padding-left: 10%
+}
+
+.dogeCardWrapper {
+
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+
+  width: 200px;
+  height: 350px;
+  margin-bottom: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.dogeCard {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 350px;
+  /* border: solid rgb(175, 175, 175) 1px; */
+  border-radius: 10px;
+  background-color: rgb(230, 230, 230);
+}
+
+.doge-pic {
+  width: 200px;
+  height: 230px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.dogeDesc {
+  margin: 0px 5px 0px 5px;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.sitelogo {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 50px;
+}
+
+.dogeName {
+  font-family: 'Pacifico', cursive;
+  font-size: 24px;
+  color: rgb(37, 37, 65);
+  text-decoration: underline;
+  text-decoration-color:  rgb(255, 141, 141);
+}
+
+.breed {
+  font-size: 14px;
+}
+
+.hi {
+  color: rgb(30, 168, 199);
+  font-family: 'Heebo', sans-serif;
+  font-weight: bold;
+}
+
+a, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: black;
+}
+
+.moreInfo {
+  position: absolute;
+  bottom: 3px;
+  color: rgb(37, 37, 65);
+  font-size: 12px;
+  font-weight: bold;
+  font-family: 'Pacifico', cursive;
+  font-family: 'Heebo', sans-serif;
+}
