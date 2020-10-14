@@ -94,7 +94,7 @@ class App extends Component {
                   hsDoges.push(hsResults)
           });
       });
-      
+
       console.log("this is the dogearr: ", doges)
 
       this.setState({dogearr: doges})
@@ -104,7 +104,10 @@ class App extends Component {
   }
 
   goSearch = () => {
-    this.setState({searchPage: true});
+    this.setState({searchPage: true}, () => {
+      let pageHeight = window.innerHeight;
+      window.scrollBy(0, pageHeight)
+    });
   }
 
   render(){
