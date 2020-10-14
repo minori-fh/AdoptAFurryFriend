@@ -58,12 +58,16 @@
     padding: 6px;
 }
 
+.link-agency-btn {
+    margin-bottom: 5px;
+}
+
 .hs {
-    width: 90px;
+    width: 80px;
 }
 
 .pm, .rd {
-    width: 120px;
+    width: 110px;
 }
 
 @media screen and (max-width: 1200px) {

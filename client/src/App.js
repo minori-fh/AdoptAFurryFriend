@@ -104,10 +104,7 @@ class App extends Component {
   }
 
   goSearch = () => {
-    this.setState({searchPage: true}, () => {
-      let pageHeight = window.innerHeight;
-      window.scrollBy(0, pageHeight)
-    });
+    this.setState({searchPage: true})
   }
 
   render(){
@@ -115,6 +112,7 @@ class App extends Component {
       <div>
 
         <HomePage buttonClick={this.goSearch}/>
+        <div id="dogeDisplay"></div>
         {(this.state.searchPage && 
         <SearchPage doges={this.state.dogearr} pmDoges={this.state.pmDoges} rdDoges={this.state.rdDoges} hsDoges={this.state.hsDoges}/>
         )}
