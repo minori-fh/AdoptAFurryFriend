@@ -41,3 +41,20 @@
         font-size: 12px;
     }
 }
+
+
+@media screen and (max-width: 420px) {
+    .nav-header {
+        font-size: 12px;
+    }
+    .nav-logo {
+        width: 20px !important;
+    }
+    .nav-btn {
+        font-size: 12px !important;
+        width:100px;
+    }
+    .link-nav-btn {
+        margin-right: 5px;
+    }
+}

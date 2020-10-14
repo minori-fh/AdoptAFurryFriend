@@ -40,3 +40,32 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .nav-logo-main {
+        width: 100;
+    }
+    .h1 {
+        font-size: 30px;
+    }
+    .h2 {
+        font-size: 20px;
+    }
+    .h3 {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .h1 {
+        font-size: 30px;
+    }
+    .h2 {
+        font-size: 20px;
+    }
+    .h3 {
+        font-size: 13px;
+    }
+    .nav-logo-main {
+        width: 100px;
+    }
+  }

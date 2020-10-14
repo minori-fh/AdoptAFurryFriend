@@ -9,6 +9,17 @@
 .hpbody {
     background-image: url("../../pages/HomePage/images/gg.png");
     background-repeat:no-repeat;
-    background-position: center 55%;   
+    background-position: center 45%;   
     background-size: 180px;
+    height: 94%;
 }
+
+
+@media screen and (max-width: 420px) {
+    .hpbody {
+        padding-top: 10%;
+    }
+    .hpbody{
+        background: none !important;
+    }
+  }

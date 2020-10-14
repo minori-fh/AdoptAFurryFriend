@@ -16,3 +16,13 @@ li {
   padding: 3px;
   text-decoration-color: rgb(164, 209, 219);
 }
+
+
+@media screen and (max-width: 420px) {
+  .sidenav-cat {
+    font-size: 14px;
+  }
+  .filterValue {
+    font-size: 12px;
+  }
+}

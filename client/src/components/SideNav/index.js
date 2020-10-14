@@ -21,23 +21,23 @@ function SideNav(props) {
             <div className="sidenav-cat">Dogs by Agency</div>  
                 <li 
                     style={{textDecoration: filterValue == "pm" ? "underline" : "none"}} 
-                    onClick={() => props.buttonClick("agency", "pm")}>
+                    onClick={() => props.buttonClick("agency", "pm")} className="filterValue">
                     PetSmart
                 </li>  
                 <li 
                     style={{textDecoration: filterValue == "rd" ? "underline" : "none" }} 
-                    onClick={() => props.buttonClick("agency", "rd")}>
+                    onClick={() => props.buttonClick("agency", "rd")} className="filterValue">
                     Rocket Dog Rescue
                 </li> 
                 <li 
                     style={{textDecoration: filterValue == "hs" ? "underline" : "none" }} 
-                    onClick={() => props.buttonClick("agency", "hs")}>
+                    onClick={() => props.buttonClick("agency", "hs")} className="filterValue">
                     Humane Society Silicon Valley
                 </li> 
             <div className="sidenav-cat">Dogs by Breed</div>    
             {
             breedArr.map(function(breed, index){
-                return <li style={{textDecoration: filterValue == breed ? "underline" : "none" }} onClick={() => props.buttonClick("breed", breed)} key={index}>{breed}</li>;
+                return <li style={{textDecoration: filterValue == breed ? "underline" : "none" }} onClick={() => props.buttonClick("breed", breed)} key={index} className="filterValue">{breed}</li>;
                 })
             }            
         </div>
