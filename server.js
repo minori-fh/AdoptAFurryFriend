@@ -1,6 +1,7 @@
 // Require/import
 var express = require("express");
 var bodyParser = require('body-parser')
+var path = require("path");
 var cors = require('cors');
 
 // Express instance 
@@ -9,12 +10,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-// Routing
-app.use('http://localhost:3000/', routes)
-
 // Define a port to listen for incoming requests
 const PORT = process.env.PORT || 3000;
-app.use(express.static(__dirname + 'client', { redirect : false }));
+app.use(express.static(path.join(__dirname + 'client', { redirect : false })));
+
+// Handle request and response
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname+'/client/build/index.html'))
+})
 
 // Create server
 app.listen(PORT, () => {
