@@ -12,7 +12,8 @@ app.use(cors());
 
 // Define a port to listen for incoming requests
 const PORT = process.env.PORT || 3000;
-app.use(express.static(path.join(__dirname + 'client/build', { redirect : false })));
+
+app.use(express.static(path.join(__dirname + 'client/build')));
 
 // Handle request and response
 app.get("*", (req, res) => {

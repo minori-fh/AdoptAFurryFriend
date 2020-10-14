@@ -16,7 +16,6 @@
     "react-scripts": "3.4.3",
     "save-dev": "0.0.1-security"
   },
-  "proxy": "http://localhost:3000",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
