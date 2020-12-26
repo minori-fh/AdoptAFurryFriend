@@ -12,7 +12,7 @@ The site was built with data (dog information) scraped from three dog adoption a
 ![Home page](client/public/images/siteimages/home.PNG)
 
 **Seeing dogs by adoption agency or by breed:**
-![By agency](client/public/images/siteimages/byagency.PNG)
+![By agency](client/public/images/siteimages/bybreed.PNG)
 
 ## Getting Started
 These instructions will help get you a copy of the project up and running on your local machine for development and testing purposes. 
