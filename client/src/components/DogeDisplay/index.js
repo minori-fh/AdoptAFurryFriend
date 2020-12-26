@@ -47,6 +47,6 @@ function DogeDisplay(props) {
         </div>
     );
 
-} 
+}
 
 export default DogeDisplay

@@ -6,16 +6,13 @@
 The site was built with data (dog information) scraped from three dog adoption agency sites in the Bay Area (Petsmart, Rocket Dog Rescue, and Humane Society of Silicon Valley) using Cheerio (node package). 
 
 ## Pictures of Site
-[Click here to visit site](https://adopt-a-friend.herokuapp.com/)
+[Click here to visit site](https://adopt-a-furry-friend.herokuapp.com/)
 
 **Initial home page:**
-![Home page](public/style/images/site-images/site1.png)
+![Home page](client/public/images/siteimages/home.PNG)
 
 **Seeing dogs by adoption agency or by breed:**
-![By agency](public/style/images/site-images/site2.gif)
-
-**Reading, creating, and deleting comments on dogs:** 
-![By breed](public/style/images/site-images/site3.gif)
+![By agency](client/public/images/siteimages/byagency.PNG)
 
 ## Getting Started
 These instructions will help get you a copy of the project up and running on your local machine for development and testing purposes. 
@@ -46,13 +43,13 @@ $ node server.js
 3. [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
 4. [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 5. [jQuery](https://api.jquery.com/)
-8. [Node*](https://nodejs.org/en/download/)
+6. [Node*](https://nodejs.org/en/download/)
 
 ## *Node Packages Used
 1. [Express](https://expressjs.com/)
 2. [Cheerio](https://www.npmjs.com/package/cheerio)
 3. [Axios](https://www.npmjs.com/package/axios)
-5. [React-scroll](https://www.npmjs.com/package/react-scroll)
+4. [React-scroll](https://www.npmjs.com/package/react-scroll)
 5. [Path](https://nodejs.org/api/path.html)
 
 ## Author(s): 
