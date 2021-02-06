@@ -32,8 +32,8 @@
   width: 200px;
   height: 350px;
   /* border: solid rgb(175, 175, 175) 1px; */
-  border-radius: 10px;
-  background-color: rgb(230, 230, 230);
+  border-radius: 10px 10px 0px 0px;
+  background-color: rgb(238, 238, 238);
 }
 
 .doge-pic {
@@ -58,7 +58,7 @@
 
 .dogeName {
   font-family: 'Pacifico', cursive;
-  font-size: 24px;
+  font-size: 22px;
   color: rgb(37, 37, 65);
   text-decoration: underline;
   text-decoration-color:  rgb(255, 141, 141);

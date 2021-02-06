@@ -10,8 +10,8 @@ function SideNav(props) {
     let filterValue = props.filterValue
 
     return (
-
-        <div className="sidenav">
+    <div className="sidenav">
+        <div id="sidenav-wrapper">
             <div className="sidenav-cat">All Dogs</div> 
             <li 
                 style={{textDecoration: filterValue == "none" ? "underline" : "none"}} 
@@ -39,8 +39,9 @@ function SideNav(props) {
             breedArr.map(function(breed, index){
                 return <li style={{textDecoration: filterValue == breed ? "underline" : "none" }} onClick={() => props.buttonClick("breed", breed)} key={index} className="filterValue">{breed}</li>;
                 })
-            }            
+            }           
         </div>
+    </div>
     );
 
 } 

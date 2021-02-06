@@ -11,7 +11,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 // Define a port to listen for incoming requests
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
+
 
 // production mode
 if (process.env.NODE_ENV === 'production') {

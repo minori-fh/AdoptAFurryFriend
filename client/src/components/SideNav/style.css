@@ -1,6 +1,11 @@
 .sidenav {
-    width: calc(20%-15px);
+    width: 20%;
     padding-left: 15px;
+}
+
+#sidenav-wrapper {
+  position: sticky;
+  top: 1px;
 }
 
 .sidenav-cat {
