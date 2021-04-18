@@ -16,7 +16,7 @@ class App extends Component {
       searchPage: false,
       dogfetchcomplete: false,
       promisesettledvalue: [],
-      proxyurl: "https://cors-anywhere.herokuapp.com/",
+      proxyurl: "https://young-headland-21728.herokuapp.com/",
       dogearr: [],
       pmDoges: [],
       rdDoges: [],
